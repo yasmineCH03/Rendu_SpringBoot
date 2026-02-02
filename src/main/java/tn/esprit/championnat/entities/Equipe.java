@@ -2,16 +2,14 @@ package tn.esprit.championnat.entities;
 import jakarta.persistence.*;
 import lombok.*;
 
-import java.time.LocalDate;
-
 
 @Entity
 @Table(name="Equipes")
 @Getter
 @Setter
 public class Equipe {
-
     @Id
+    @GeneratedValue (strategy = GenerationType.IDENTITY)
     private long idEquipe;
     private String libelle;
     private int nbPointsTotal;

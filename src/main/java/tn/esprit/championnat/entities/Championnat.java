@@ -11,6 +11,8 @@ public class Championnat {
     private long idChampionnat;
     private String libelleC;
     private int annee;
+
+    @Enumerated(EnumType.STRING)
     private Categorie categorie;
 
 }
