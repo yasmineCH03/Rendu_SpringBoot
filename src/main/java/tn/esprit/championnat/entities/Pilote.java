@@ -2,6 +2,7 @@ package tn.esprit.championnat.entities;
 import jakarta.persistence.*;
 import lombok.*;
 
+import java.util.Set;
 
 
 @Entity
@@ -14,4 +15,10 @@ public class Pilote {
     private  String libelleP;
     private  int  nbPointsTotal;
     private  int classementGeneral;
+
+    @OneToMany (mappedBy = "pilote")
+    private Set<Position> position ;
+
+    @ManyToOne
+    private Equipe equipe;
 }

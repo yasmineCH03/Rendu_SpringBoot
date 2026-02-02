@@ -13,4 +13,10 @@ public class Position {
     private long idPosition;
     private int classement;
     private int nbPoints;
+
+    @ManyToOne (cascade = CascadeType.ALL)
+    private Course course;
+
+    @ManyToOne
+    private Pilote pilote;
 }

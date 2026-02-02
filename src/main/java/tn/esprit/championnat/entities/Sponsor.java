@@ -2,6 +2,7 @@ package tn.esprit.championnat.entities;
 import jakarta.persistence.*;
 import lombok.*;
 
+import java.util.List;
 
 
 @Entity
@@ -16,4 +17,7 @@ public class Sponsor {
     private String pays;
     private float budgetAnnuel;
     private boolean bloquerContrat;
+
+    @OneToMany (mappedBy = "sponsor")
+    private List<Contrat> contrats;
 }

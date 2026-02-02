@@ -10,4 +10,8 @@ public class Detailchampionnat {
     @Id
     private String code;
     private String description;
+
+    @OneToOne (mappedBy = "detailchampionnat")
+    private Championnat championnat ;
+
 }

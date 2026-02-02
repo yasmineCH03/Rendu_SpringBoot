@@ -15,4 +15,11 @@ public class Contrat {
     private float montant;
     private String annee;
     private Boolean archived;
+
+
+    @ManyToOne
+    private Equipe equipe;
+
+    @ManyToOne
+    private Sponsor sponsor;
 }

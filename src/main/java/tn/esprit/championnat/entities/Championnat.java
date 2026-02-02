@@ -2,6 +2,8 @@ package tn.esprit.championnat.entities;
 import jakarta.persistence.*;
 import lombok.*;
 
+import java.util.Set;
+
 @Entity
 @Table(name = "championnats")
 @Getter
@@ -15,4 +17,9 @@ public class Championnat {
     @Enumerated(EnumType.STRING)
     private Categorie categorie;
 
+    @OneToOne (fetch = FetchType.EAGER , cascade = CascadeType.ALL)
+    private Detailchampionnat detailchampionnat;
+
+    @ManyToMany (cascade = CascadeType.ALL)
+    private Set<Course> courses ;
 }
