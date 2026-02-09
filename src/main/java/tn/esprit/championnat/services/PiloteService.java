@@ -1,0 +1,15 @@
+package tn.esprit.championnat.services;
+
+import tn.esprit.championnat.entities.Pilote;
+import tn.esprit.championnat.repositories.PiloteRepository;
+
+public class PiloteService implements IPiloteService{
+
+
+    PiloteRepository piloteRepository;
+    @Override
+    public String addPilote(Pilote p) {
+        piloteRepository.save(p);
+        return "Pilote ajouté avec succés";
+    }
+}
