@@ -1,7 +1,9 @@
 package tn.esprit.championnat.entities;
 import jakarta.persistence.*;
 import lombok.*;
+import org.springframework.cglib.core.Local;
 
+import java.time.LocalDate;
 import java.util.List;
 
 
@@ -12,11 +14,14 @@ import java.util.List;
 public class Sponsor {
 
     @Id
-    private long idSponsor;
+    private Long idSponsor;
     private String nom;
     private String pays;
-    private float budgetAnnuel;
-    private boolean bloquerContrat;
+    private Float budgetAnnuel;
+    private Boolean bloquerContrat;
+    private boolean archived;
+    private LocalDate dateCreation;
+    private LocalDate dateDerniereModification;
 
     @OneToMany (mappedBy = "sponsor")
     private List<Contrat> contrats;
