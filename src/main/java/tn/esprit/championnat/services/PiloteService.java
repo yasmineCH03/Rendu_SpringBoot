@@ -1,8 +1,13 @@
 package tn.esprit.championnat.services;
 
+import lombok.AllArgsConstructor;
+import org.springframework.stereotype.Service;
 import tn.esprit.championnat.entities.Pilote;
 import tn.esprit.championnat.repositories.PiloteRepository;
 
+
+@Service
+@AllArgsConstructor
 public class PiloteService implements IPiloteService{
 
 

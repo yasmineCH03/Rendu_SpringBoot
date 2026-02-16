@@ -1,14 +1,17 @@
 package tn.esprit.championnat.services;
 
+import lombok.AllArgsConstructor;
+import org.springframework.stereotype.Service;
 import tn.esprit.championnat.entities.Sponsor;
 import tn.esprit.championnat.repositories.SponsorRepository;
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.List;
-import java.util.function.Supplier;
 import java.util.stream.Collectors;
 
+@Service
+@AllArgsConstructor
 public class SponsorService implements ISponsorService{
 
     private SponsorRepository  sponsorRepository;
