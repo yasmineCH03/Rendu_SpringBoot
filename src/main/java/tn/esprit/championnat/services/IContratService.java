@@ -1,5 +1,5 @@
 package tn.esprit.championnat.services;
 
-public interface IContratSservice {
-    void archiverContrats();
+public interface IContratService {
+    void archiverContratsExpireesEtAffichageContratsActifsParEquipe();
 }

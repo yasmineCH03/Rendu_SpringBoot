@@ -2,6 +2,7 @@ package tn.esprit.championnat.entities;
 import jakarta.persistence.*;
 import lombok.*;
 
+import java.time.LocalDate;
 
 
 @Entity
@@ -22,4 +23,5 @@ public class Contrat {
 
     @ManyToOne
     private Sponsor sponsor;
+
 }
