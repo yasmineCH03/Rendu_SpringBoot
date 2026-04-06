@@ -45,6 +45,8 @@ public class ContratService implements IContratService {
                                 c.getSponsor().getNom())
                 )
         );
-
     }
+    /** List<Contrat> contratArchived = ContratRepository.findbyArchived(false)
+     * equipeRepository.findAll().forEach(equipe->    */
+
 }
